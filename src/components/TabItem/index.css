@@ -1,0 +1,11 @@
+button {
+  background-color: transparent;
+  color: #ffffff;
+  margin: 10px;
+  border: none;
+  font-size: medium;
+}
+.active {
+  color: #fec653;
+  border-bottom-color: 1px solid #fec653;
+}
