@@ -10,7 +10,11 @@ const Nav = props => {
         className="navimg"
       />
       <div className="timsec">
-        <p>Score: {count} </p>
+        <div className="score">
+          <p>Score: </p>
+          <p>{count}</p>
+        </div>
+
         <div className="timsec">
           <img
             src="https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png "
