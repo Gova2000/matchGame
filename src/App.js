@@ -327,7 +327,7 @@ class MatchGame extends Component {
         ) : (
           <div className="sec">
             <ul>
-              <Thumb tdet={imagesList} index={thumb} />
+              <Thumb tdet={imagesList} index={thumb} key={imagesList.id} />
             </ul>
 
             <ul className="btns">
