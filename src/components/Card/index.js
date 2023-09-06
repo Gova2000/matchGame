@@ -10,8 +10,8 @@ const Card = props => {
   return (
     <>
       <li>
-        <button type="button" className="b">
-          <img src={imageUrl} alt="match" className="img" onClick={clk} />
+        <button type="button" className="b" onClick={clk}>
+          <img src={imageUrl} alt="match" className="img" />
         </button>
       </li>
     </>
