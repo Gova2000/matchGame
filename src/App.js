@@ -266,6 +266,7 @@ class MatchGame extends Component {
     time: 60,
     count: 0,
     thumb: 0,
+    alt: true,
   }
 
   componentDidMount() {
@@ -300,6 +301,9 @@ class MatchGame extends Component {
       this.setState(prev => ({count: prev.count + 1}))
       const img = Math.ceil(Math.random() * imagesList.length)
       this.setState({thumb: img})
+      this.setState({
+        alt: false,
+      })
     } else {
       this.setState({toggle: true, time: 0})
     }
@@ -315,7 +319,7 @@ class MatchGame extends Component {
   }
 
   render() {
-    const {time, toggle, count, thumb, active} = this.state
+    const {time, toggle, count, thumb, active, alt} = this.state
 
     const thumbnailsList = imagesList.filter(each => each.category === active)
 
@@ -342,7 +346,12 @@ class MatchGame extends Component {
             </ul>
             <ul className="btns1">
               {thumbnailsList.map(each => (
-                <Card details={each} key={each.Id} click={this.clicked1} />
+                <Card
+                  details={each}
+                  key={each.Id}
+                  click={this.clicked1}
+                  tog={alt}
+                />
               ))}
             </ul>
           </div>
