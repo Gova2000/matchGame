@@ -10,10 +10,14 @@ const Nav = props => {
         className="navimg"
       />
       <div className="timsec">
-        <div className="score">
-          <p>Score: </p>
-          <p>{count}</p>
-        </div>
+        <ul className="score">
+          <li>
+            <p>Score:</p>
+          </li>
+          <li>
+            <p>{count}</p>
+          </li>
+        </ul>
 
         <div className="timsec">
           <img
